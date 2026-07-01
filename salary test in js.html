@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Net Salary</title>
+</head>
+<body>
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Tax</th>
+        <th>Net Salary</th>
+    </tr>
+    <tbody id="result"></tbody>
+</table>
+
+<script>
+let output = "";
+
+for (let i = 1; i <= 5; i++) {
+
+    let name = prompt("Enter name of employee " + i);
+    let salary = Number(prompt("Enter salary of " + name));
+
+    let tax = salary * 0.10;
+    let netSalary = salary - tax;
+
+    output += "<tr>";
+    output += "<td>" + name + "</td>";
+    output += "<td>" + salary + "</td>";
+    output += "<td>" + tax + "</td>";
+    output += "<td>" + netSalary + "</td>";
+    output += "</tr>";
+}
+
+document.getElementById("result").innerHTML = output;
+</script>
+
+</body>
+</html>
